@@ -3,7 +3,7 @@ const lucidPoster='/resources/lucid-cover-small.jpg';
 const kaegoProfile='/resources/kaego-profile-small.jpg';
 const cuttingPoster='/resources/cutting-poster.png';
 const musicStill='/resources/burned-coffee-cover.jpg';
-const silentStill='/resources/albratrum-cup-cover.jpg';
+const silentStill='/resources/Screenshot 2026-09-26 at 13.25.33.png';
 const burnedCoffeeFilm='/resources/burned-coffee-final.mp4';
 const albratrumFilm='/resources/albratrum-film.mp4';
 function App(){
