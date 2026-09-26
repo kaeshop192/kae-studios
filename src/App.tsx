@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-const lucidPoster='/resources/lucid-poster.jpg';
-const kaegoProfile='/resources/kaego-profile.jpg';
+const lucidPoster='/resources/lucid-cover-small.jpg';
+const kaegoProfile='/resources/kaego-profile-small.jpg';
 const cuttingPoster='/resources/cutting-poster.png';
 const musicStill='/resources/music-still-2.jpg';
 const silentStill='/resources/silent-still-2.jpg';
