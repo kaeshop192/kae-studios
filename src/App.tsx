@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 const lucidPoster='/resources/lucid-cover-small.jpg';
 const kaegoProfile='/resources/kaego-profile-small.jpg';
 const cuttingPoster='/resources/cutting-poster.png';
-const musicStill='/resources/music-still-2.jpg';
-const silentStill='/resources/silent-still-2.jpg';
+const musicStill='/resources/burned-coffee-cover.jpg';
+const silentStill='/resources/albratrum-cup-cover.jpg';
+const burnedCoffeeFilm='/resources/burned-coffee-final.mp4';
+const albratrumFilm='/resources/albratrum-film.mp4';
 function App(){
  const [route,setRoute]=useState(window.location.hash||'#/');
  useEffect(()=>{const sync=()=>{setRoute(window.location.hash||'#/');window.scrollTo(0,0)};window.addEventListener('hashchange',sync);return()=>window.removeEventListener('hashchange',sync)},[]);
@@ -15,12 +17,13 @@ function App(){
   <a className="work-card" href="#/film/cutting"><div className="work-art" style={{backgroundImage:`linear-gradient(180deg,transparent,rgba(0,0,0,.5)),url('${cuttingPoster}')`}}><span>02 / DOCUMENTARY</span><strong>CUTTING<br/>THROUGH LABELS</strong><i>View project ↗</i></div><div className="work-meta"><h2>Cutting Through Labels</h2><p>Documentary</p></div></a>
   <a className="work-card" href="#/film/burned-coffee"><div className="work-art" style={{backgroundImage:`linear-gradient(180deg,transparent,rgba(0,0,0,.5)),url('${musicStill}')`}}><span>03 / MUSIC VIDEO</span><strong>BURNED<br/>COFFEE</strong><i>View project ↗</i></div><div className="work-meta"><h2>Burned Coffee</h2><p>Music video</p></div></a>
   <a className="work-card" href="#/film/albratrum"><div className="work-art" style={{backgroundImage:`linear-gradient(180deg,transparent,rgba(0,0,0,.5)),url('${silentStill}')`}}><span>04 / SILENT FILM</span><strong>/ALBRATRUM/</strong><i>View project ↗</i></div><div className="work-meta"><h2>/albratrum/</h2><p>Silent film</p></div></a>
+  <a className="work-card" href="https://www.youtube.com/watch?v=p6sHiB6lRbw" target="_blank" rel="noreferrer"><div className="work-art" style={{backgroundImage:`linear-gradient(180deg,transparent,rgba(0,0,0,.45)),url('https://img.youtube.com/vi/p6sHiB6lRbw/maxresdefault.jpg')`}}><span>05 / LIVE EVENT</span><strong>EVENT<br/>FILMING</strong><i>Watch on YouTube ↗</i></div><div className="work-meta"><h2>Event Filming</h2><p>Camera work</p></div></a>
  </main><Footer/></div>;
  const simpleProject=(title:string,type:string,image:string,body:React.ReactNode)=><div className="page paper"><Nav light/><main className="case-study"><div className="case-kicker"><a href="#/portfolio">← Portfolio</a><span>{type}</span></div><h1>{title}</h1><div className="case-hero" style={{backgroundImage:`linear-gradient(180deg,transparent,rgba(0,0,0,.5)),url('${image}')`}}><strong>{title.toUpperCase()}</strong></div>{body}</main><Footer/></div>;
  if(path==='/film/lucid')return simpleProject('Lucid','SHORT FILM',lucidPoster,<div className="project-action"><a href="https://vimeo.com/993079594" target="_blank" rel="noreferrer">View film on Vimeo ↗</a></div>);
  if(path==='/film/cutting')return simpleProject('Cutting Through Labels','DOCUMENTARY',cuttingPoster,<div className="project-action"><a href="https://vimeo.com/1108093726" target="_blank" rel="noreferrer">View film on Vimeo ↗</a></div>);
- if(path==='/film/burned-coffee')return simpleProject('Burned Coffee','MUSIC VIDEO',musicStill,<div className="project-action"><p>Produced by Kaego Paul</p></div>);
- if(path==='/film/albratrum')return simpleProject('/albratrum/','SILENT FILM',silentStill,<div className="project-action"><p>Shot and produced by Kaego Paul</p></div>);
+ if(path==='/film/burned-coffee')return simpleProject('Burned Coffee','MUSIC VIDEO',musicStill,<div className="project-action"><p>Produced by Kaego Paul</p><div className="watch-film"><h2>Watch film</h2><video controls playsInline preload="metadata" poster={musicStill}><source src={burnedCoffeeFilm} type="video/mp4"/></video></div></div>);
+ if(path==='/film/albratrum')return simpleProject('/albratrum/','SILENT FILM',silentStill,<div className="project-action"><p>Shot and produced by Kaego Paul</p><div className="watch-film"><h2>Watch film</h2><video controls playsInline preload="metadata" poster={silentStill}><source src={albratrumFilm} type="video/mp4"/></video></div></div>);
  if(path==='/about')return <div className="page paper"><Nav light/><main className="about-page"><div className="page-head"><p>ABOUT / PRODUCER & FILMMAKER</p><h1>Kaego Paul</h1></div><div className="about-grid"><div className="kae-frame"><img src={kaegoProfile} alt="Kaego Paul"/></div><div className="about-copy"><p className="lead">Kaego Paul is a producer and filmmaker focused on authentic, underrepresented stories.</p><p>Through KAE Studios, her work spans narrative, documentary and visual storytelling.</p></div></div></main><Footer/></div>;
  if(path==='/contact')return <div className="page contact-page"><Nav/><main><p>START A CONVERSATION</p><h1>Have a story<br/><i>worth making?</i></h1><a href="mailto:link@kaestudios.co.uk">link@kaestudios.co.uk ↗</a></main><Footer/></div>;
  return <div className="site"><Nav/><main><section className="hero"><div className="hero-bg"><div className="light"/><div className="grain"/></div><div className="hero-top"><span></span><span>LONDON</span></div><div className="hero-title"><h1>KAE</h1><h1 className="outline">STUDIOS</h1></div><div className="hero-bottom"><p>FILM / DOCUMENTARY / VISUAL STORYTELLING</p><a href="#/portfolio">VIEW PORTFOLIO →</a></div></section></main><Footer/></div>;
