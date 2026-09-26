@@ -22,3 +22,34 @@
 .work-art strong{font-size:clamp(42px,6.2vw,94px);line-height:.9;letter-spacing:-.06em}
 @media(max-width:760px){.work-art strong{font-size:9vw;line-height:.92;letter-spacing:-.05em}}
 @media(max-width:520px){.work-art strong{font-size:8.5vw;line-height:.94;letter-spacing:-.045em}}
+
+/* Final visual polish */
+.portfolio{padding-top:8px}
+.work-card{margin-bottom:88px}
+.work-art{height:min(66vh,720px);min-height:480px;padding:32px;position:relative;transition:transform .35s ease,filter .35s ease}
+.work-card:hover .work-art{transform:scale(.997);filter:brightness(.96)}
+.work-art span,.work-art i{text-transform:uppercase;font-weight:500;text-shadow:0 1px 12px rgba(0,0,0,.28)}
+.work-art strong{max-width:86%;text-shadow:0 2px 24px rgba(0,0,0,.16)}
+.work-meta{padding:18px 0 20px}
+.work-meta h2{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.035em}
+.work-meta p{margin:0;font-size:12px;letter-spacing:.04em}
+.about-copy{max-width:620px;margin:auto}
+.about-copy .lead{font-size:clamp(18px,1.55vw,22px);line-height:1.65;letter-spacing:-.015em}
+.about-copy a{display:inline-block;margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #777;padding-bottom:4px}
+@media(max-width:760px){
+ .work-card{margin-bottom:64px}
+ .work-art{height:54vh;min-height:390px;padding:24px}
+ .work-art strong{max-width:92%}
+ .work-meta{padding:15px 0 17px}
+ .about-copy{padding:42px 7vw 8px}
+}
+@media(max-width:520px){
+ .portfolio{padding-bottom:60px}
+ .work-card{margin-bottom:56px}
+ .work-art{height:50vh;min-height:350px;padding:20px}
+ .work-art strong{font-size:8vw;line-height:.96;letter-spacing:-.04em;max-width:94%;overflow-wrap:normal}
+ .work-art span,.work-art i{font-size:8px;letter-spacing:.13em}
+ .work-meta h2{font-size:23px}
+ .work-meta p{font-size:11px}
+ .about-copy .lead{font-size:18px;line-height:1.6}
+}
