@@ -4,8 +4,8 @@ const kaegoProfile='/resources/kaego-profile-small.jpg';
 const cuttingPoster='https://raw.githubusercontent.com/kaeshop192/kae-studios/main/cutting-through-labels-cover.jpg';
 const musicStill='https://raw.githubusercontent.com/kaeshop192/kae-studios/main/burned-coffee-clean-cover.jpg';
 const silentStill='/resources/Screenshot 2026-09-26 at 13.25.33.png';
-const burnedCoffeeFilm='/resources/burned-coffee-final.mp4';
-const albratrumFilm='/resources/albratrum-film.mp4';
+const burnedCoffeeFilm='https://pub-8f861a246bda44f49ca20aac9c7015a4.r2.dev/Burned_Coffee_Balanced_Final.mp4';
+const albratrumFilm='https://pub-8f861a246bda44f49ca20aac9c7015a4.r2.dev/solo%20project%20silent%20film%20(shot%20and%20produced%20by%20me).m4v';
 function App(){
  const [route,setRoute]=useState(window.location.hash||'#/');
  useEffect(()=>{const sync=()=>{setRoute(window.location.hash||'#/');window.scrollTo(0,0)};window.addEventListener('hashchange',sync);return()=>window.removeEventListener('hashchange',sync)},[]);
