@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 const lucidPoster='/resources/lucid-cover-small.jpg';
 const kaegoProfile='/resources/kaego-profile-small.jpg';
-const cuttingPoster='/cutting-through-labels-cover.jpg';
-const musicStill='/burned-coffee-clean-cover.jpg';
+const cuttingPoster='https://raw.githubusercontent.com/kaeshop192/kae-studios/main/cutting-through-labels-cover.jpg';
+const musicStill='https://raw.githubusercontent.com/kaeshop192/kae-studios/main/burned-coffee-clean-cover.jpg';
 const silentStill='/resources/Screenshot 2026-09-26 at 13.25.33.png';
 const burnedCoffeeFilm='/resources/burned-coffee-final.mp4';
 const albratrumFilm='/resources/albratrum-film.mp4';
