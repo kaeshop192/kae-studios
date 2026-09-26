@@ -17,3 +17,8 @@
 @media(max-width:520px){
  .work-art strong{font-size:11.5vw;line-height:.88;letter-spacing:-.055em}
 }
+
+/* Refined portfolio scale: retain the type system without overpowering the imagery. */
+.work-art strong{font-size:clamp(42px,6.2vw,94px);line-height:.9;letter-spacing:-.06em}
+@media(max-width:760px){.work-art strong{font-size:9vw;line-height:.92;letter-spacing:-.05em}}
+@media(max-width:520px){.work-art strong{font-size:8.5vw;line-height:.94;letter-spacing:-.045em}}
